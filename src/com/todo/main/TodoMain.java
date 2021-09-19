@@ -62,6 +62,7 @@ public class TodoMain  {
 	        	break;
 	        	
 	         case "exit":
+	        	System.out.println("시스템을 종료합니다.");
 	            quit = true;
 	            break;
 
