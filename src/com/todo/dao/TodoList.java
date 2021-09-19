@@ -33,23 +33,26 @@ public class TodoList {
 	}
 
 	public void sortByName() {
+		System.out.println("제목 순으로 정렬되었습니다.");
 		Collections.sort(list, new TodoSortByName());
 
 	}
 
 	public void listAll() {
 		System.out.println("\n"
-				+ "inside list_All method\n");
+				+ "정렬된 목록입니다.");
 		for (TodoItem myitem : list) {
-			System.out.println(myitem.getTitle() + myitem.getDesc());
+			System.out.println("[" + myitem.getTitle() + "]" +  " : " + myitem.getDesc() + " <" + myitem.getCurrent_date() + "> ");
 		}
 	}
 	
 	public void reverseList() {
+		System.out.println("제목 역순으로 정렬되었습니다.");
 		Collections.reverse(list);
 	}
 
 	public void sortByDate() {
+		System.out.println("날짜 순으로 정렬되었습니다.");
 		Collections.sort(list, new TodoSortByDate());
 	}
 

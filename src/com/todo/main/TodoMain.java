@@ -1,5 +1,6 @@
 package com.todo.main;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import com.todo.dao.TodoList;
@@ -8,16 +9,18 @@ import com.todo.service.*;
 
 
 
-public class TodoMain {
+public class TodoMain  {
 	   
-	   public static void start() {
+	   public static void start() throws IOException {
 	   
 	      Scanner sc = new Scanner(System.in);
 	      TodoList l = new TodoList();
 	      boolean isList = false;
 	      boolean quit = false;
+	      Menu.displaymenu();
+	      TodoUtil.loadList(l, "todolist.txt");
 	      do {
-	         Menu.displaymenu();
+	    	 System.out.print("실행할 명령을 입력하세요 >");
 	         isList = false;
 	         String choice = sc.next();
 	         switch (choice) {
@@ -53,17 +56,22 @@ public class TodoMain {
 	            l.sortByDate();
 	            isList = true;
 	            break;
-
+	            
+	         case "help":
+	        	Menu.prompt();
+	        	break;
+	        	
 	         case "exit":
 	            quit = true;
 	            break;
 
 	         default:
-	            System.out.println("please enter one of the above mentioned command");
+	            System.out.println("해당 명령은 유효하지 않습니다 - 도움말(help)");
 	            break;
 	         }
 	         
 	         if(isList) l.listAll();
 	      } while (!quit);
+	      TodoUtil.saveList(l, "todolist.txt");
 	   }
 	}
