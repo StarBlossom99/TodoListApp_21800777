@@ -20,7 +20,7 @@ public class TodoMain  {
 	      Menu.displaymenu();
 	      TodoUtil.loadList(l, "todolist.txt");
 	      do {
-	    	 System.out.print("실행할 명령을 입력하세요  >");
+	    	 System.out.print("실행할 명령을 입력하세요 >");
 	         isList = false;
 	         String choice = sc.next();
 	         switch (choice) {
