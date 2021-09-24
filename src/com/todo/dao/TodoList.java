@@ -53,7 +53,9 @@ public class TodoList {
 		int count_key = 0;
 		for (TodoItem myitem : list) {
 			if(myitem.getTitle().contains(keyword)) {
-				System.out.println(list.indexOf(myitem)+1 +  ". " + "[" + myitem.getCategory() + "] " + myitem.getTitle() +  " : " + myitem.getDesc() + " - " + myitem.getDue_date() + " <" + myitem.getCurrent_date() + "> ");
+				System.out.println(list.indexOf(myitem)+1 +  ". " + "[" + myitem.getCategory() +
+						"] " + myitem.getTitle() +  " : " + myitem.getDesc() + " - " +
+						myitem.getDue_date() + " <" + myitem.getCurrent_date() + "> ");
 				count_key ++;
 			}
 		}
@@ -65,7 +67,9 @@ public class TodoList {
 		int count_key = 0;
 		for (TodoItem myitem : list) {
 			if(myitem.getDesc().contains(keyword)) {
-				System.out.println(list.indexOf(myitem)+1 +  ". " + "[" + myitem.getCategory() + "] " + myitem.getTitle() +  " : " + myitem.getDesc() + " - " + myitem.getDue_date() + " <" + myitem.getCurrent_date() + "> ");
+				System.out.println(list.indexOf(myitem)+1 +  ". " + "[" + myitem.getCategory() + 
+						"] " + myitem.getTitle() +  " : " + myitem.getDesc() + " - " + 
+						myitem.getDue_date() + " <" + myitem.getCurrent_date() + "> ");
 				count_key ++;
 			}
 		}
@@ -77,7 +81,9 @@ public class TodoList {
 		int count_key = 0;
 		for (TodoItem myitem : list) {
 			if(myitem.getCategory().contains(keyword)) {
-				System.out.println(list.indexOf(myitem)+1 +  ". " + "[" + myitem.getCategory() + "] " + myitem.getTitle() +  " : " + myitem.getDesc() + " - " + myitem.getDue_date() + " <" + myitem.getCurrent_date() + "> ");
+				System.out.println(list.indexOf(myitem)+1 +  ". " + "[" + myitem.getCategory() +
+						"] " + myitem.getTitle() +  " : " + myitem.getDesc() + " - " +
+						myitem.getDue_date() + " <" + myitem.getCurrent_date() + "> ");
 				count_key ++;
 			}
 		}

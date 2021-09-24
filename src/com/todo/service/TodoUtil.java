@@ -85,11 +85,12 @@ public class TodoUtil {
 			return;
 		}
 		
-		System.out.println("항목의 새로운 내용을 입력하세요: ");
+		System.out.print("항목의 새로운 내용을 입력하세요: ");
+		sc.nextLine();
 		String new_description = sc.nextLine().trim();
 		
 		System.out.print("항목의 새로운 마감일자를 입력하세요: ");
-		sc.nextLine();
+		
 		String new_duedate = sc.nextLine().trim();
 		
 		
@@ -104,7 +105,8 @@ public class TodoUtil {
 	public static void listAll(TodoList l) {
 		System.out.println("<전체 목록, 총 " + l.getSize() + "개>" );
 		for (TodoItem item : l.getList()) {
-			System.out.println(l.indexOf(item)+1 +  ". " + "[" + item.getCategory() + "] " + item.getTitle() +  " : " + item.getDesc() + " - " + item.getDue_date() + " <" + item.getCurrent_date() + "> ");
+			System.out.println(l.indexOf(item)+1 +  ". " + "[" + item.getCategory() + "] " + item.getTitle() + 
+					" : " + item.getDesc() + " - " + item.getDue_date() + " <" + item.getCurrent_date() + "> ");
 		}
 	}
 	
